@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnailCorreios - Cadastro</title>
+    <link rel="icon" href="https://i.im.ge/2024/09/17/fv9Mp8.mascote2.png" type="image/png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4A90E2, #d0e3f0);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #4A90E2;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .mascote {
+            margin-bottom: 20px;
+        }
+        .mascote img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .form-group {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .form-group button:hover {
+            background-color: #357ABD;
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="mascote">
+        <a href="https://im.ge/i/mascote2.fv9Mp8">
+            <img src="https://i.im.ge/2024/09/17/fv9Mp8.mascote2.png" alt="Mascote SnailCorreios">
+        </a>
+    </div>
+    <h1>Cadastro SnailCorreios</h1>
+    <form action="https://example.com/submit-form" method="post">
+        <div class="form-group">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Idade</label>
+            <input type="number" id="idade" name="idade" min="1" max="99" oninput="this.value=this.value.slice(0, 2);" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Endereço</label>
+            <input type="text" id="street" name="street" placeholder="Rua" required>
+            <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
+            <input type="text" id="number" name="number" placeholder="Número" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="text" id="phone" name="phone" pattern="\d{1,11}" maxlength="11" placeholder="Digite seu telefone" required>
+            <small>Por favor, insira um número de telefone válido (apenas números).</small>
+        </div>
+        <div class="form-group">
+            <label for="payment">Forma de Pagamento</label>
+            <select id="payment" name="payment" required>
+                <option value="credit-card">Cartão de Crédito</option>
+                <option value="debit-card">Cartão de Débito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferência Bancária</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 SnailCorreios - "Entregas lentas, mas com muito carinho!"</p>
+</footer>
+
+</body>
+</html>
